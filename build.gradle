@@ -1,3 +1,14 @@
+plugins {
+  id "org.sonarqube" version "6.0.1.5171"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "gradle-simple-2-cs"
+    property "sonar.host.url", "http://localhost:20251"
+  }
+}
+
 apply plugin: 'java'
 apply plugin: 'maven-publish'
 
@@ -31,8 +42,4 @@ publishing {
 wrapper {
     gradleVersion = "7.3.3"
     distributionType = Wrapper.DistributionType.ALL
-}
-
-plugins {
-  id "org.sonarqube" version "6.0.1.5171"
 }
